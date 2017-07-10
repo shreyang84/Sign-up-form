@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Sign up form</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <!-- <script src="validation.js"></script> -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+        <style type="text/css">
+        
+         body{
+            background: #70e1f5;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #ffd194, #70e1f5);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #ffd194, #70e1f5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+
+        
+        </style>
+
+        <link rel="stylesheet" type="text/css" href="mycss.css">
+        
+        <script src="script.js"></script>
+
+<!--
+<script type="text/javascript">
+
+// var name = document.getElementById("uname").pattern;
+// var uemail = document.getElementById("email").pattern;
+// var password1 = document.getElementById("pwd1").pattern;
+// var conpass = document.getElementById("pwd2").pattern;.
+
+
+    
+
+
+// if (name && uemail && password1 && conpass == true ) {
+//
+//
+//                    var a = document.getElementById("uname").value;
+//                    var b = document.getElementById("email").value;
+//                     
+//                    document.getElementById('p1').innerHTML = a;
+//                  
+//                    document.getElementById('p2').innerHTML = b;  
+                    // return a,b;
+    
+
+
+
+
+</script>
+-->
+
+   </head>
+   
+   
+   
+    <body class="container">
+
+        <div class="container" style=" margin-top: 80px;">
+            
+
+            <div class="maindiv"  >
+                
+            <form id="mainform">
+                <h1> Sign up </h1>
+                <hr>
+                    <div class="inner-addon left-addon">
+                    <span class="glyphicon glyphicon-user" style="color: #3a7bd5"></span>
+                                                
+                    <label><font class="text-info">User name:</font></label>
+                    <input  type="text"  name="uname" placeholder="e.g shreyang8555"    title="e.g shreyang8555" id="uname" required="pattern=('[a-z]{1,15})" >   
+                    </div>                          
+ 
+
+
+                <div class="inner-addon left-addon">
+                  <span class="glyphicon glyphicon-envelope" style="color: #3a7bd5"></span>
+                <label><font class="text-info">Email Address</font></label>
+                <input type="text" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" title="e.g shre@gmail.com" name="email" placeholder="e.g shre@gmail.com" id="email"  >
+                </div>
+                
+                <div class="inner-addon left-addon">
+                <span class="glyphicon glyphicon-lock" style="color:#3a7bd5"> </span>
+                <label><font class="text-info">Password</font></label>
+                <input type="password"  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"  title="e.g Ashe@854. Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"   name="pwd1" placeholder="e.g Ashe@854"  id="pwd1" >
+                </div>
+        
+                <div class="inner-addon left-addon">
+                <span class="glyphicon glyphicon-retweet" style="color:#3a7bd5"> </span>
+                <label><font class="text-info">Confirm password</font></label>
+               
+                <input type="password" id="pwd2" name="pwd2" placeholder="Ashe@854"  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"  title="e.g Ashe@854. Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"  >
+                <span id="message"></span>
+                </div>
+                <br>
+
+ <script>
+                    
+$('#pwd1, #pwd2').on('keyup', function () {
+  if ($('#pwd1').val() == $('#pwd2').val()) {
+    $('#message').html('Matching').css('color', 'green');
+  } else 
+    $('#message').html('Not Matching').css('color', 'red');
+});
+     
+     
+                </script>
+
+
+                <div class="row">
+                <div class="col-md-6">
+                  <button type="submit"  class="btn btn-primary" name="submit" id="bt1" onsubmit="displayVals() "  >Sign Up</button>
+                </div>
+                <div class="col-md-6" >
+
+                   <button type="button"  class="btn btn-primary " name="submit" value="Back">Back</button>
+
+                </div>
+                       
+
+                </div>
+             
+
+
+              
+            </form>
+                
+               
+
+            </div>
+           <p  id="para1"></p>
+            <a href="#" id="a1">New User signup?</a>
+        </div>
+      
+    </body>
+</html>
